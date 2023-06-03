@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  api-service:
+    restart: always
+    build: ./files_api
+    volumes:
+     - ./files_api:/usr/src/app
+    ports:
+     - 3333:3333
+
+    container_name: file_api_rest
